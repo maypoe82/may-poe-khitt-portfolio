@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>May Poe Khitt | Software Developer</title>
+  <meta name="description" content="Portfolio of May Poe Khitt, a full-stack development student at Republic Polytechnic seeking a software developer internship.">
+  <link rel="icon" href="assets/img/favicon.png">
+
+  <!-- Fonts from the design document: Bebas Neue for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Two blurred circles of colour drifting behind the whole page ===== -->
+  <div class="orbs" aria-hidden="true"><span></span><span></span></div>
+
+  <!-- ===== Loading screen: counts to 100, then fades away ===== -->
+  <div class="loader">
+    <img src="assets/img/logo.png" alt="">
+    <p class="loader-count">000</p>
+    <div class="loader-track"><div class="loader-fill"></div></div>
+  </div>
+
+  <!-- ===== Thin line at the top showing how far down the page you are ===== -->
+  <div class="progress"></div>
+
+  <!-- ===== Navigation bar (the same on every page) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a class="nav-logo" href="index.html"><img src="assets/img/logo.png" alt="MPK logo, back to home"></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="nav-cta" href="contact.html">Let's talk ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero: heading, typed job title, buttons and photo ===== -->
+    <section class="container hero">
+      <div>
+        <p class="eyebrow" data-reveal>Full-stack development student · Republic Polytechnic</p>
+        <h1 data-reveal data-delay="1">Software Developer</h1>
+        <!-- main.js types these one after another -->
+        <span class="typed" data-words='["Full-Stack Developer", "Back-End Developer", "Web Developer", "IT Student"]' data-reveal data-delay="2"></span>
+        <p class="hero-intro" data-reveal data-delay="3">I build full-stack web applications with Node.js, Express.js and MySQL, and I'm expanding into React, React Native and Python.</p>
+        <div class="hero-actions" data-reveal data-delay="4">
+          <a class="btn" href="projects.html">View my projects ↗</a>
+          <a class="btn btn-outline" href="assets/May_Poe_Khitt_Resume.pdf" download>Download resume ↓</a>
+          <p class="availability eyebrow"><span class="dot"></span>Available for <strong>Internship</strong></p>
+        </div>
+      </div>
+      <div class="hero-photo" data-reveal data-delay="2">
+        <svg class="sparkle" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 0q2 20 22 22q-20 2-22 22q-2-20-22-22q20-2 22-22z"/></svg>
+        <img src="assets/img/may-poe-khitt.jpg" alt="Portrait of May Poe Khitt" width="720" height="840">
+      </div>
+    </section>
+
+    <!-- ===== Four numbers, which count up when scrolled to ===== -->
+    <section class="container">
+      <div class="card stats">
+        <div class="stat" data-reveal data-delay="1">
+          <p class="stat-number" data-count="4">00</p>
+          <p class="stat-label">Projects built</p>
+        </div>
+        <div class="stat" data-reveal data-delay="2">
+          <p class="stat-number" data-count="6">00</p>
+          <p class="stat-label">Programming languages</p>
+        </div>
+        <div class="stat" data-reveal data-delay="3">
+          <p class="stat-number" data-count="16">00</p>
+          <p class="stat-label">Tools &amp; frameworks</p>
+        </div>
+        <div class="stat" data-reveal data-delay="4">
+          <p class="stat-number" data-count="2">00</p>
+          <p class="stat-label">Year of diploma</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured projects ===== -->
+    <section class="container">
+      <div class="section-head">
+        <h2 class="section-title" data-reveal>Featured projects</h2>
+        <a class="text-link" href="projects.html" data-reveal>Explore all projects →</a>
+      </div>
+      <div class="project-grid">
+        <article class="card project-card tilt" data-reveal data-delay="1">
+          <div class="project-image">
+            <img src="assets/img/project-lockin.jpg" alt="LockIn dashboard showing topic mastery bars, flashcards due, average mastery and a day streak" loading="lazy">
+            <span class="project-type">Solo project</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row">
+              <h3>LockIn</h3>
+              <a class="arrow-link" href="https://github.com/maypoe82/lockin" target="_blank" rel="noopener" aria-label="LockIn on GitHub">↗</a>
+            </div>
+            <p>AI study platform that adapts to what you get wrong</p>
+            <p class="project-tech">Node.js · Express · EJS · MySQL / TiDB · Google Gemini · Docker · GitHub Actions</p>
+          </div>
+        </article>
+        <article class="card project-card tilt" data-reveal data-delay="2">
+          <div class="project-image">
+            <img src="assets/img/project-lawn-n-found.jpg" alt="Lawn &amp; Found home page showing a list of lost and found item reports" loading="lazy">
+            <span class="project-type">Software project</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row">
+              <h3>Lawn &amp; Found</h3>
+              <a class="arrow-link" href="https://github.com/xavlkh/Lawn-n-Found" target="_blank" rel="noopener" aria-label="Lawn &amp; Found on GitHub">↗</a>
+            </div>
+            <p>Campus lost-and-found web application</p>
+            <p class="project-tech">Node.js · Express.js · EJS · MySQL · Bootstrap</p>
+          </div>
+        </article>
+        <article class="card project-card tilt" data-reveal data-delay="3">
+          <div class="project-image">
+            <img src="assets/img/project-rp-resource-centre.svg" alt="Deployment diagram: the app and MySQL database run in Docker on an AWS server behind an HTTPS proxy" loading="lazy">
+            <span class="project-type">DevOps project</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row">
+              <h3>RP Resource Centre</h3>
+              <a class="arrow-link" href="https://github.com/Thiha256/Devops-CA2" target="_blank" rel="noopener" aria-label="RP Resource Centre on GitHub">↗</a>
+            </div>
+            <p>Laptop loan system, deployed to the cloud</p>
+            <p class="project-tech">Node.js · Express.js · MySQL · Docker · AWS EC2 · Caddy</p>
+          </div>
+        </article>
+        <article class="card project-card tilt" data-reveal data-delay="4">
+          <div class="project-image">
+            <img src="assets/img/project-aidpulse.jpg" alt="AidPulse SG citizen dashboard showing live health alerts and case tracking" loading="lazy">
+            <span class="project-type">Software project</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row">
+              <h3>AidPulse SG</h3>
+              <a class="arrow-link" href="https://github.com/Leon-a11y-alt/AIdPulse_SG" target="_blank" rel="noopener" aria-label="AidPulse SG on GitHub">↗</a>
+            </div>
+            <p>AI-powered health and emergency response platform</p>
+            <p class="project-tech">Next.js · Supabase · Twilio Verify · n8n · Vercel</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Skills, tools and education ===== -->
+    <section class="container skills-layout">
+      <div>
+        <h2 class="section-title ruled" data-reveal>Core skills</h2>
+        <ul class="skill-list">
+          <li data-reveal data-delay="1">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M4 12l14-8 14 8-14 8zM4 20l14 8 14-8"/></svg>
+            <div>
+              <h3>Full-stack web development</h3>
+              <p>Web apps that connect frontend, backend, database and AI.</p>
+            </div>
+          </li>
+          <li data-reveal data-delay="2">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M5 6h26v10H5zM5 20h26v10H5zM10 11h.1M10 25h.1"/></svg>
+            <div>
+              <h3>Back-end development</h3>
+              <p>Node.js and Express.js routes, sessions and file uploads.</p>
+            </div>
+          </li>
+          <li data-reveal data-delay="3">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M4 6h28v18H4zM13 30h10M18 24v6"/></svg>
+            <div>
+              <h3>Front-end &amp; mobile</h3>
+              <p>React, React Native (Expo), EJS, HTML and CSS.</p>
+            </div>
+          </li>
+          <li data-reveal data-delay="1">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M6 9c0-6 24-6 24 0v18c0 6-24 6-24 0zM6 9c0 6 24 6 24 0M6 18c0 6 24 6 24 0"/></svg>
+            <div>
+              <h3>Databases</h3>
+              <p>MySQL queries and relationships, plus MongoDB CRUD and aggregation.</p>
+            </div>
+          </li>
+          <li data-reveal data-delay="2">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 4a14 14 0 1 0 .1 0M11 18l5 5 9-10"/></svg>
+            <div>
+              <h3>Software testing</h3>
+              <p>Unit testing with pytest, UI testing with Playwright, test plans and bug reports.</p>
+            </div>
+          </li>
+          <li data-reveal data-delay="3">
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M5 5h26v26H5zM5 13h26M14 13v18"/></svg>
+            <div>
+              <h3>UI/UX design</h3>
+              <p>Figma, user personas, usability testing and accessibility.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="section-title" data-reveal>Tools &amp; technologies</h2>
+        <div class="card tool-box" data-reveal data-delay="1">
+          <ul class="tool-grid">
+            <li><span class="badge">JS</span>JavaScript</li>
+            <li><span class="badge">PY</span>Python</li>
+            <li><span class="badge">JV</span>Java</li>
+            <li><span class="badge">SQL</span>SQL</li>
+            <li><span class="badge">N</span>Node.js</li>
+            <li><span class="badge">EX</span>Express.js</li>
+            <li><span class="badge">R</span>React</li>
+            <li><span class="badge">RN</span>React Native</li>
+            <li><span class="badge">MY</span>MySQL</li>
+            <li><span class="badge">MDB</span>MongoDB</li>
+            <li><span class="badge">PT</span>pytest</li>
+            <li><span class="badge">PW</span>Playwright</li>
+            <li><span class="badge">FIG</span>Figma</li>
+            <li><span class="badge">GIT</span>Git</li>
+            <li><span class="badge">AI</span>Gemini API</li>
+            <li><span class="badge">DK</span>Docker</li>
+          </ul>
+        </div>
+        <div class="card edu-box" data-reveal data-delay="2">
+          <h3>Certifications &amp; education</h3>
+          <ul>
+            <li>
+              <span class="badge">RP</span>
+              <div>Diploma in Information Technology (Full-Stack Development)<small>Republic Polytechnic · 2025 – Present</small></div>
+            </li>
+            <li>
+              <span class="badge">HR</span>
+              <div>31 Certificates &amp; Courses<small>HackerRank · CTF · IELTS Academic 6.5 · Pearson Edexcel IGCSE · LinkedIn Learning · MongoDB University</small></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How I work ===== -->
+    <section class="container">
+      <h2 class="section-title" style="margin-bottom: 20px;" data-reveal>How I work</h2>
+      <ol class="card process">
+        <li data-reveal data-delay="1">
+          <h3><span>01</span>Understand</h3>
+          <p>Clarify the users and the problem to solve.</p>
+        </li>
+        <li data-reveal data-delay="2">
+          <h3><span>02</span>Design</h3>
+          <p>Plan the pages, personas and the database.</p>
+        </li>
+        <li data-reveal data-delay="3">
+          <h3><span>03</span>Build</h3>
+          <p>Code the frontend, backend and queries.</p>
+        </li>
+        <li data-reveal data-delay="4">
+          <h3><span>04</span>Test</h3>
+          <p>Debug and write unit tests.</p>
+        </li>
+        <li data-reveal data-delay="5">
+          <h3><span>05</span>Present</h3>
+          <p>Demo the work and explain how it works.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== Contact banner ===== -->
+    <section class="container">
+      <div class="card cta" data-reveal>
+        <h2>Let's build something together</h2>
+        <div>
+          <p>I'm seeking a Software Developer or Full-Stack Developer internship.</p>
+          <a class="btn" href="contact.html">Let's work together ↗</a>
+        </div>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:maypoe827@gmail.com">maypoe827@gmail.com</a></li>
+          <li><span>GitHub</span><a href="https://github.com/maypoe82" target="_blank" rel="noopener">github.com/maypoe82</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/may-poe-khitt-23a289365" target="_blank" rel="noopener">linkedin.com/in/may-poe-khitt-23a289365</a></li>
+          <li><span>Location</span>Woodlands, Singapore</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer (the same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 May Poe Khitt. All rights reserved.</p>
+        <p>
+          Let's connect &nbsp;·&nbsp;
+          <a href="https://github.com/maypoe82" target="_blank" rel="noopener">GitHub</a> &nbsp;·&nbsp;
+          <a href="https://www.linkedin.com/in/may-poe-khitt-23a289365" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp;
+          <a href="mailto:maypoe827@gmail.com">Email</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

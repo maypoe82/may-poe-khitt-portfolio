@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | May Poe Khitt</title>
+  <meta name="description" content="Software and DevOps projects by May Poe Khitt, with GitHub links.">
+  <link rel="icon" href="assets/img/favicon.png">
+
+  <!-- Fonts from the design document: Bebas Neue for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Two blurred circles of colour drifting behind the whole page ===== -->
+  <div class="orbs" aria-hidden="true"><span></span><span></span></div>
+
+  <!-- ===== Loading screen: counts to 100, then fades away ===== -->
+  <div class="loader">
+    <img src="assets/img/logo.png" alt="">
+    <p class="loader-count">000</p>
+    <div class="loader-track"><div class="loader-fill"></div></div>
+  </div>
+
+  <!-- ===== Thin line at the top showing how far down the page you are ===== -->
+  <div class="progress"></div>
+
+  <!-- ===== Navigation bar (the same on every page) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a class="nav-logo" href="index.html"><img src="assets/img/logo.png" alt="MPK logo, back to home"></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="nav-cta" href="contact.html">Let's talk ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Heading and filter buttons ===== -->
+    <section class="container page-intro">
+      <p class="eyebrow" data-reveal>Portfolio</p>
+      <h1 class="page-title" data-reveal data-delay="1">My Projects</h1>
+      <p class="muted" data-reveal data-delay="2">Solo and team projects from my Diploma in Information Technology at Republic Polytechnic.</p>
+
+      <!-- main.js reads data-filter and shows the matching cards -->
+      <div class="filters" role="group" aria-label="Filter projects" data-reveal data-delay="3">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">All projects</button>
+        <button class="filter-btn" data-filter="software" aria-pressed="false">Software projects</button>
+        <button class="filter-btn" data-filter="devops" aria-pressed="false">DevOps projects</button>
+      </div>
+    </section>
+
+    <!-- ===== Project cards: data-category decides which filter shows them ===== -->
+    <section class="container">
+      <div class="project-grid">
+        <article class="card project-card tilt" data-reveal data-delay="1"
+                  data-category="software"
+                  data-type="Solo project"
+                  data-title="LockIn"
+                  data-summary="Before an exam, students re-read 30 to 60 slides a week without knowing which topics they actually understand. LockIn closes the loop between studying and testing: it turns uploaded notes into study material, records every quiz answer against a topic, and then tells the student what to revise, for how long, and on which day."
+                  data-features="Upload a PDF or paste notes, and the AI splits them into 3 to 6 topics with explanations, key points, flashcards and quizzes|Study packs are generated in the background, with a status page that updates itself and a retry if the AI service is busy|Topic mastery is scored from the last 10 answers, so improvement shows up quickly|Revision alerts after each quiz, with a suggested revision time for every weak topic|A five-step revision plan for every topic below 60%, with practice questions the AI writes when the existing ones run out|An exam planner that spreads the weak topics across the days before the exam|Flashcards on a Leitner spaced-repetition schedule|Progress tracking: score history, first-versus-latest mastery, study streak and total study time|Accounts with password reset by email, and a light and dark theme"
+                  data-role="Built the whole application on my own: database, backend, pages, tests and deployment|Designed the Gemini prompts and validated the JSON that comes back, so the study material stays grounded in the uploaded notes|Wrote the mastery, revision-plan, spaced-repetition and exam-schedule logic|Secured it with bcrypt password hashing, CSRF tokens, rate limits, a strict Content Security Policy and parameterised queries|Wrote 12 automated unit and integration tests, including a full student journey run against a real database|Set up GitHub Actions to run the tests and build the Docker image on every push, and deployed it with TiDB Cloud as the production database"
+                  data-tech="Node.js · Express · EJS · MySQL / TiDB · Google Gemini · Docker · GitHub Actions"
+                  data-github="https://github.com/maypoe82/lockin"
+                  data-live="https://lockin-vum5.onrender.com">
+          <div class="project-image">
+            <img src="assets/img/project-lockin.jpg" alt="LockIn dashboard showing topic mastery bars, flashcards due, average mastery and a day streak" loading="lazy">
+            <span class="project-type">Solo project</span>
+          </div>
+          <div class="project-body">
+            <h3>LockIn</h3>
+            <p>A study platform that turns lecture notes into AI-generated explanations, flashcards and quizzes, then tracks how well each topic is understood and builds a revision plan around the weakest topics and the exam date. Built on my own.</p>
+            <div class="project-detail">
+              <h4>What I did</h4>
+              <ul>
+                <li>Built the whole platform on my own: AI study-pack generation, adaptive quizzes, topic mastery tracking and an exam-based revision planner</li>
+                <li>Secured it, wrote 12 automated tests, set up GitHub Actions CI and deployed it with Docker</li>
+              </ul>
+            </div>
+            <p class="project-tech">Node.js · Express · EJS · MySQL / TiDB · Google Gemini · Docker · GitHub Actions</p>
+            <div class="project-links">
+              <button class="btn btn-block" type="button" data-modal-open>Read more →</button>
+              <a class="btn btn-outline btn-block" href="https://github.com/maypoe82/lockin" target="_blank" rel="noopener">View on GitHub ↗</a>
+              <a class="btn btn-outline btn-block" href="https://lockin-vum5.onrender.com" target="_blank" rel="noopener">Live site ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="card project-card tilt" data-reveal data-delay="2"
+                  data-category="software"
+                  data-type="Software project"
+                  data-title="Lawn &amp; Found"
+                  data-summary="Students lose things on campus every day, and there was no single place to report them. Lawn &amp; Found lets anyone post a lost or found item with a photo, search what others have posted, and claim an item that belongs to them."
+                  data-features="Post a lost or found item with a photo and description|Search and filter the reports by keyword and status|Claim an item, with the claim checked before it is approved|A personal dashboard showing your own reports and claims|Accounts with secure sign-up and login"
+                  data-role="Built the claims system, including validating a claim before it is accepted|Built the personal dashboard where a student sees their own reports and claims|Wrote the backend routes and the MySQL queries behind them|Handled the data passed between the pages and the database"
+                  data-tech="Node.js · Express.js · EJS · MySQL · Bootstrap"
+                  data-github="https://github.com/xavlkh/Lawn-n-Found"
+                  data-live="https://lawn-n-found.onrender.com">
+          <div class="project-image">
+            <img src="assets/img/project-lawn-n-found.jpg" alt="Lawn &amp; Found home page showing a list of lost and found item reports" loading="lazy">
+            <span class="project-type">Software project</span>
+          </div>
+          <div class="project-body">
+            <h3>Lawn &amp; Found</h3>
+            <p>A lost-and-found portal for Republic Polytechnic students to report, search and claim lost or found items. Team project for C237 Software Application Development.</p>
+            <div class="project-detail">
+              <h4>What I did</h4>
+              <ul>
+                <li>Built the claims system and the personal dashboard for reporting, browsing and claiming items</li>
+                <li>Wrote the backend routes and database queries, with claim validation and data handling</li>
+              </ul>
+            </div>
+            <p class="project-tech">Node.js · Express.js · EJS · MySQL · Bootstrap</p>
+            <div class="project-links">
+              <button class="btn btn-block" type="button" data-modal-open>Read more →</button>
+              <a class="btn btn-outline btn-block" href="https://github.com/xavlkh/Lawn-n-Found" target="_blank" rel="noopener">View on GitHub ↗</a>
+              <a class="btn btn-outline btn-block" href="https://lawn-n-found.onrender.com" target="_blank" rel="noopener">Live site ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="card project-card tilt" data-reveal data-delay="3"
+                  data-category="devops"
+                  data-type="DevOps project"
+                  data-title="RP Resource Centre"
+                  data-summary="Students need to borrow laptops and equipment from their school, so we built a loan system for it. The DevOps half of the project was getting that system off our own computers and running properly on a cloud server."
+                  data-features="Browse the laptops available, filtered by school|Item photos loaded from the database|Loan request forms for borrowing equipment|Runs in Docker containers, so it behaves the same everywhere|Automatic HTTPS, so the site is secure"
+                  data-role="Built the laptop browsing pages and the loan request forms|Added filtering by school and displayed item photos stored in the database|Deployed the app to an AWS EC2 server using Docker Compose|Ran MySQL in its own container and set up Caddy to handle HTTPS automatically"
+                  data-tech="Node.js · Express.js · MySQL · Docker · AWS EC2 · Caddy"
+                  data-github="https://github.com/Thiha256/Devops-CA2">
+          <div class="project-image">
+            <img src="assets/img/project-rp-resource-centre.svg" alt="Deployment diagram: the app and MySQL database run in Docker on an AWS server behind an HTTPS proxy" loading="lazy">
+            <span class="project-type">DevOps project</span>
+          </div>
+          <div class="project-body">
+            <h3>RP Resource Centre</h3>
+            <p>A laptop loan system for students to browse and borrow school equipment, containerised and deployed to the cloud. Team project for the DevOps module.</p>
+            <div class="project-detail">
+              <h4>What I did</h4>
+              <ul>
+                <li>Built the laptop browsing pages and loan request forms, with school filtering and item photos from the database</li>
+                <li>Deployed the app to AWS EC2 with Docker Compose, a MySQL container and automatic HTTPS through Caddy</li>
+              </ul>
+            </div>
+            <p class="project-tech">Node.js · Express.js · MySQL · Docker · AWS EC2 · Caddy</p>
+            <div class="project-links">
+              <button class="btn btn-block" type="button" data-modal-open>Read more →</button>
+              <a class="btn btn-outline btn-block" href="https://github.com/Thiha256/Devops-CA2" target="_blank" rel="noopener">View on GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="card project-card tilt" data-reveal data-delay="4"
+                  data-category="software"
+                  data-type="Software project"
+                  data-title="AidPulse SG"
+                  data-summary="In a health emergency, information is scattered across many places. AidPulse SG brings it into one app, with a different view for each kind of user: the public, volunteers, and emergency officers."
+                  data-features="For the public: a health chatbot, live hospital availability on a map, incident reporting and real-time alerts|For volunteers: mission matching, verified opportunities and a record of contributions|For emergency officers: broadcast drafting, responder chat, and hospital bed and resource management|Sign-in by phone number with a one-time code"
+                  data-role="Developed the phone OTP sign-in flow, where a user receives a one-time code by SMS|Designed the AidPulse SG logo|Designed the promotional poster|Contributed to the presentation and the explainer material"
+                  data-tech="Next.js · Supabase · Twilio Verify · n8n · Vercel"
+                  data-github="https://github.com/Leon-a11y-alt/AIdPulse_SG"
+                  data-live="https://aidpulsesg.vercel.app"
+                  data-extra="assets/img/aidpulse-poster.jpg"
+                  data-extra-label="Poster I designed ↗">
+          <div class="project-image">
+            <img src="assets/img/project-aidpulse.jpg" alt="AidPulse SG citizen dashboard showing live health alerts and case tracking" loading="lazy">
+            <span class="project-type">Software project</span>
+          </div>
+          <div class="project-body">
+            <h3>AidPulse SG</h3>
+            <p>A real-time health and emergency response platform for Singapore, with separate views for citizens, volunteers and emergency officers. Team project by Team BrainByte.</p>
+            <div class="project-detail">
+              <h4>What I did</h4>
+              <ul>
+                <li>Developed the phone OTP sign-in flow</li>
+                <li>Designed the logo and promotional poster, and contributed to the presentation and explainer material</li>
+              </ul>
+            </div>
+            <p class="project-tech">Next.js · Supabase · Twilio Verify · n8n · Vercel</p>
+            <div class="project-links">
+              <button class="btn btn-block" type="button" data-modal-open>Read more →</button>
+              <a class="btn btn-outline btn-block" href="https://github.com/Leon-a11y-alt/AIdPulse_SG" target="_blank" rel="noopener">View on GitHub ↗</a>
+              <a class="btn btn-outline btn-block" href="https://aidpulsesg.vercel.app" target="_blank" rel="noopener">Live site ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Pop-up with the full write-up, filled in by main.js ===== -->
+    <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-label="Project details">
+      <div class="modal-box">
+        <button class="modal-close" type="button" aria-label="Close">×</button>
+        <p class="eyebrow modal-type"></p>
+        <h2 class="modal-title"></h2>
+        <p class="modal-summary"></p>
+        <h3>Main features</h3>
+        <ul class="modal-features"></ul>
+        <h3>My part in the project</h3>
+        <ul class="modal-role"></ul>
+        <h3>Technologies used</h3>
+        <p class="modal-tech"></p>
+        <div class="modal-actions"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Footer (the same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 May Poe Khitt. All rights reserved.</p>
+        <p>
+          Let's connect &nbsp;·&nbsp;
+          <a href="https://github.com/maypoe82" target="_blank" rel="noopener">GitHub</a> &nbsp;·&nbsp;
+          <a href="https://www.linkedin.com/in/may-poe-khitt-23a289365" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp;
+          <a href="mailto:maypoe827@gmail.com">Email</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

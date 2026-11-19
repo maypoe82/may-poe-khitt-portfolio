@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | May Poe Khitt</title>
+  <meta name="description" content="About May Poe Khitt: technical skills, education, experience and certifications.">
+  <link rel="icon" href="assets/img/favicon.png">
+
+  <!-- Fonts from the design document: Bebas Neue for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Two blurred circles of colour drifting behind the whole page ===== -->
+  <div class="orbs" aria-hidden="true"><span></span><span></span></div>
+
+  <!-- ===== Loading screen: counts to 100, then fades away ===== -->
+  <div class="loader">
+    <img src="assets/img/logo.png" alt="">
+    <p class="loader-count">000</p>
+    <div class="loader-track"><div class="loader-fill"></div></div>
+  </div>
+
+  <!-- ===== Thin line at the top showing how far down the page you are ===== -->
+  <div class="progress"></div>
+
+  <!-- ===== Navigation bar (the same on every page) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a class="nav-logo" href="index.html"><img src="assets/img/logo.png" alt="MPK logo, back to home"></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="nav-cta" href="contact.html">Let's talk ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Photo and introduction ===== -->
+    <section class="container about-hero">
+      <img src="assets/img/may-poe-khitt.jpg" alt="Portrait of May Poe Khitt" width="720" height="840" data-reveal>
+      <div>
+        <p class="eyebrow" data-reveal>About me</p>
+        <h1 data-reveal data-delay="1">May Poe Khitt</h1>
+        <p class="about-role" data-reveal data-delay="2">Software Developer / Full-Stack Developer Intern</p>
+        <p class="about-bio" data-reveal data-delay="3">I'm a Year 2 Diploma in Information Technology student at Republic Polytechnic, specialising in Full-Stack Development. I've built web applications with Node.js, Express.js, EJS, JavaScript and MySQL across four team projects, and I'm now expanding into React, React Native, Python and software testing.</p>
+        <ul class="facts" data-reveal data-delay="4">
+          <li><span>Location</span>Woodlands, Singapore</li>
+          <li><span>Languages</span>Burmese (native) · English (fluent)</li>
+          <li><span>Looking for</span>Internship</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Technical skills ===== -->
+    <section class="container">
+      <h2 class="section-title ruled" data-reveal>Technical skills</h2>
+      <div class="skill-row" data-reveal>
+        <h3>Languages</h3>
+        <ul class="tag-list">
+          <li>JavaScript</li><li>Python</li><li>Java</li><li>SQL</li><li>HTML</li><li>CSS</li>
+        </ul>
+      </div>
+      <div class="skill-row" data-reveal>
+        <h3>Back-end</h3>
+        <ul class="tag-list">
+          <li>Node.js</li><li>Express.js</li><li>Authentication (bcrypt, sessions)</li><li>Phone OTP</li><li>File uploads</li><li>REST routing</li><li>Background jobs</li><li>Email (SMTP)</li>
+        </ul>
+      </div>
+      <div class="skill-row" data-reveal>
+        <h3>Front-end &amp; mobile</h3>
+        <ul class="tag-list">
+          <li>React</li><li>React Native (Expo)</li><li>EJS</li><li>Bootstrap</li><li>HTML</li><li>CSS</li>
+        </ul>
+      </div>
+      <div class="skill-row" data-reveal>
+        <h3>Database</h3>
+        <ul class="tag-list">
+          <li>MySQL</li><li>SQL queries</li><li>CRUD operations</li><li>Transactions</li><li>Schema migrations</li><li>TiDB Cloud</li><li>MongoDB</li><li>Aggregation</li><li>Indexing</li>
+        </ul>
+      </div>
+      <div class="skill-row" data-reveal>
+        <h3>DevOps</h3>
+        <ul class="tag-list">
+          <li>Docker Compose</li><li>GitHub Actions (CI)</li><li>AWS EC2</li><li>Render</li><li>Caddy (HTTPS)</li><li>Linux (Ubuntu)</li>
+        </ul>
+      </div>
+      <div class="skill-row" data-reveal>
+        <h3>Testing</h3>
+        <ul class="tag-list">
+          <li>pytest</li><li>Playwright</li><li>Unit testing</li><li>Integration testing</li><li>Test-driven development</li><li>Test planning</li><li>Test case design</li><li>Bug reporting</li>
+        </ul>
+      </div>
+      <div class="skill-row" data-reveal>
+        <h3>Design</h3>
+        <ul class="tag-list">
+          <li>Figma</li><li>UI/UX design</li><li>User personas</li><li>Usability testing</li><li>Accessibility</li><li>Logo and poster design</li>
+        </ul>
+      </div>
+      <div class="skill-row" data-reveal>
+        <h3>AI integration</h3>
+        <ul class="tag-list">
+          <li>Google Gemini API</li><li>Prompt design</li><li>Structured JSON output</li><li>Response validation</li>
+        </ul>
+      </div>
+      <div class="skill-row" data-reveal>
+        <h3>Security</h3>
+        <ul class="tag-list">
+          <li>CSRF protection</li><li>Rate limiting</li><li>Content Security Policy</li><li>Parameterised queries</li><li>Session security</li>
+        </ul>
+      </div>
+      <div class="skill-row" data-reveal>
+        <h3>Ways of working</h3>
+        <ul class="tag-list">
+          <li>Agile</li><li>Scrum</li><li>Requirements gathering</li><li>Git &amp; GitHub</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Education and experience ===== -->
+    <section class="container two-columns">
+      <div>
+        <h2 class="section-title ruled" data-reveal>Education</h2>
+        <ul class="timeline">
+          <li data-reveal>
+            <div class="timeline-top"><h3>Diploma in Information Technology</h3><time>2025 – Present</time></div>
+            <p>Full-Stack Development specialisation · Republic Polytechnic, Singapore</p>
+          </li>
+          <li data-reveal data-delay="1">
+            <div class="timeline-top"><h3>IGCSE</h3><time>2021 – 2024</time></div>
+            <p>YECC, Myanmar</p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="section-title ruled" data-reveal>Experience</h2>
+        <ul class="timeline">
+          <li data-reveal>
+            <div class="timeline-top"><h3>Banquet Server (Part-Time)</h3><time>Apr 2025 – Present</time></div>
+            <p>Hilton Singapore Orchard</p>
+            <p>Serving guests at banquets, weddings and corporate events, and coordinating with the kitchen and service team to keep events on schedule.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Certifications: each thumbnail opens the real certificate ===== -->
+    <section class="container">
+      <h2 class="section-title ruled" data-reveal>Certifications</h2>
+      <div class="cert-grid">
+        <a class="card cert-card tilt" href="https://www.hackerrank.com/certificates/ebd170444fa7" target="_blank" rel="noopener" data-reveal data-delay="1">
+          <div class="cert-image"><img src="assets/img/cert-java-basic.jpg" alt="Certificate for Java (Basic), presented to May Poe Khitt" loading="lazy"></div>
+          <div class="cert-body">
+            <h3>Java (Basic)</h3>
+            <p>HackerRank · Earned 15 Nov 2026</p>
+            <span class="text-link">View certificate ↗</span>
+          </div>
+        </a>
+        <a class="card cert-card tilt" href="https://www.hackerrank.com/certificates/5a11ca1415a3" target="_blank" rel="noopener" data-reveal data-delay="2">
+          <div class="cert-image"><img src="assets/img/cert-python-basic.jpg" alt="Certificate for Python (Basic), presented to May Poe Khitt" loading="lazy"></div>
+          <div class="cert-body">
+            <h3>Python (Basic)</h3>
+            <p>HackerRank · Earned 15 Nov 2026</p>
+            <span class="text-link">View certificate ↗</span>
+          </div>
+        </a>
+        <a class="card cert-card tilt" href="https://www.hackerrank.com/certificates/b29fcc32bfc5" target="_blank" rel="noopener" data-reveal data-delay="3">
+          <div class="cert-image"><img src="assets/img/cert-sql-basic.jpg" alt="Certificate for SQL (Basic), presented to May Poe Khitt" loading="lazy"></div>
+          <div class="cert-body">
+            <h3>SQL (Basic)</h3>
+            <p>HackerRank · Earned 15 Nov 2026</p>
+            <span class="text-link">View certificate ↗</span>
+          </div>
+        </a>
+        <a class="card cert-card tilt" href="https://www.hackerrank.com/certificates/b9066fada4c7" target="_blank" rel="noopener" data-reveal data-delay="4">
+          <div class="cert-image"><img src="assets/img/cert-css-basic.jpg" alt="Certificate for CSS (Basic), presented to May Poe Khitt" loading="lazy"></div>
+          <div class="cert-body">
+            <h3>CSS (Basic)</h3>
+            <p>HackerRank · Earned 15 Nov 2026</p>
+            <span class="text-link">View certificate ↗</span>
+          </div>
+        </a>
+        <a class="card cert-card tilt" href="https://www.hackerrank.com/certificates/65ae2d30e14c" target="_blank" rel="noopener" data-reveal data-delay="1">
+          <div class="cert-image"><img src="assets/img/cert-react-basic.jpg" alt="Certificate for React (Basic), presented to May Poe Khitt" loading="lazy"></div>
+          <div class="cert-body">
+            <h3>React (Basic)</h3>
+            <p>HackerRank · Earned 15 Nov 2026</p>
+            <span class="text-link">View certificate ↗</span>
+          </div>
+        </a>
+        <a class="card cert-card tilt" href="https://www.hackerrank.com/certificates/15e3feb1d4ea" target="_blank" rel="noopener" data-reveal data-delay="2">
+          <div class="cert-image"><img src="assets/img/cert-frontend-react.jpg" alt="Certificate for Frontend Developer (React), presented to May Poe Khitt" loading="lazy"></div>
+          <div class="cert-body">
+            <h3>Frontend Developer (React)</h3>
+            <p>HackerRank · Earned 15 Nov 2026</p>
+            <span class="text-link">View certificate ↗</span>
+          </div>
+        </a>
+        <a class="card cert-card tilt" href="assets/img/cert-ctf.jpg" target="_blank" rel="noopener" data-reveal data-delay="3">
+          <div class="cert-image"><img src="assets/img/cert-ctf.jpg" alt="Certificate for Capture the Flag (CTF), presented to May Poe Khitt" loading="lazy"></div>
+          <div class="cert-body">
+            <h3>Capture the Flag (CTF)</h3>
+            <p>YECC · December 2023</p>
+            <span class="text-link">View certificate ↗</span>
+          </div>
+        </a>
+        <a class="card cert-card tilt" href="assets/img/cert-ielts.jpg" target="_blank" rel="noopener" data-reveal data-delay="4">
+          <div class="cert-image"><img src="assets/img/cert-ielts.jpg" alt="Certificate for IELTS Academic — Band 6.5, presented to May Poe Khitt" loading="lazy"></div>
+          <div class="cert-body">
+            <h3>IELTS Academic — Band 6.5</h3>
+            <p>British Council · July 2024</p>
+            <span class="text-link">View certificate ↗</span>
+          </div>
+        </a>
+        <a class="card cert-card tilt" href="assets/img/cert-igcse.jpg" target="_blank" rel="noopener" data-reveal data-delay="1">
+          <div class="cert-image"><img src="assets/img/cert-igcse.jpg" alt="Certificate for Pearson Edexcel IGCSE, presented to May Poe Khitt" loading="lazy"></div>
+          <div class="cert-body">
+            <h3>Pearson Edexcel IGCSE</h3>
+            <p>Certificate of Excellence · 2024</p>
+            <span class="text-link">View certificate ↗</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Short courses: no image, just the title and the link ===== -->
+    <section class="container">
+      <h2 class="section-title ruled" data-reveal>Courses</h2>
+      <div class="course-grid">
+        <a class="card course tilt" href="https://www.linkedin.com/learning/certificates/007ace8683a23a3950d2012a0902feb4ef86624bf9d6224d4e33a53b6eaf4945" target="_blank" rel="noopener" data-reveal data-delay="1">
+          <h3>Playwright Python and Pytest for Web Automation Testing</h3>
+          <p>LinkedIn Learning · Nov 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://www.linkedin.com/learning/certificates/c2318993d126d9dd8e108a16541466ec45ddd9ae2f99d0d25678b768635dbad9" target="_blank" rel="noopener" data-reveal data-delay="2">
+          <h3>Software Testing Foundations: Bug Writing and Management</h3>
+          <p>LinkedIn Learning · Nov 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://www.linkedin.com/learning/certificates/ef1d2a0a8b7f7d747a9cfdbb5da832a05d3491741915e7efb2b849ba6c27f4b6" target="_blank" rel="noopener" data-reveal data-delay="3">
+          <h3>Unit Testing in Python</h3>
+          <p>LinkedIn Learning</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <div class="card course tilt" data-reveal data-delay="1">
+          <h3>Unit Testing and Test Driven Development in Python</h3>
+          <p>LinkedIn Learning</p>
+
+        </div>
+        <a class="card course tilt" href="https://www.linkedin.com/learning/certificates/7832577962c75b467d08a107c3efdfe1d1c6938fd75892aa714be457d5634626" target="_blank" rel="noopener" data-reveal data-delay="2">
+          <h3>Python Essential Training</h3>
+          <p>LinkedIn Learning · Feb 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://www.linkedin.com/learning/certificates/642a115ae148cda1386c73ee222d095494d3190534b2ea3c707a3dd1daa43b93" target="_blank" rel="noopener" data-reveal data-delay="3">
+          <h3>Python Object-Oriented Programming</h3>
+          <p>LinkedIn Learning · Feb 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <div class="card course tilt" data-reveal data-delay="1">
+          <h3>Certified Entry-Level Python Programmer (PCEP-30-02) Cert Prep</h3>
+          <p>LinkedIn Learning</p>
+
+        </div>
+        <div class="card course tilt" data-reveal data-delay="2">
+          <h3>Python for Data Visualization</h3>
+          <p>LinkedIn Learning</p>
+
+        </div>
+        <a class="card course tilt" href="https://www.linkedin.com/learning/certificates/b5870827fc2e2a298fca5d25c9de5e93437871ac3f8296062346e28d1c4c9910" target="_blank" rel="noopener" data-reveal data-delay="3">
+          <h3>JavaScript: Web Form Programming</h3>
+          <p>LinkedIn Learning · Jul 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://www.linkedin.com/learning/certificates/26206d095fd940094a0a09e3727b72c31b474f3857fff0610dfcfeb79a81e4c4" target="_blank" rel="noopener" data-reveal data-delay="1">
+          <h3>Create a Quick, Clean, and Cheap Website with Bootstrap Templates</h3>
+          <p>LinkedIn Learning</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://www.linkedin.com/learning/certificates/7be4e5dc08ef35ca28735d0f163c05a3fc9935de8fa250fa66d63c64e905400e" target="_blank" rel="noopener" data-reveal data-delay="2">
+          <h3>Figma Essential Training: The Basics</h3>
+          <p>LinkedIn Learning · Nov 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://www.linkedin.com/learning/certificates/5f183838abbb30256172e3f19e2828e44eb1addfafab7a0c6562c7fbbeca8776" target="_blank" rel="noopener" data-reveal data-delay="3">
+          <h3>Designing Accessible Components In Figma</h3>
+          <p>LinkedIn Learning</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://www.linkedin.com/learning/certificates/5fa758683c4a4750c43ecacc9d04aaa15fe416ac21dd35add81c320bf196c105" target="_blank" rel="noopener" data-reveal data-delay="1">
+          <h3>UX Design: 3 Creating Personas</h3>
+          <p>LinkedIn Learning · Nov 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://www.linkedin.com/learning/certificates/906a95bd756f3998af81de004d016d6529264d91f4b0411a4b63b7fbc826d82d" target="_blank" rel="noopener" data-reveal data-delay="2">
+          <h3>UX Foundations: Usability Testing</h3>
+          <p>LinkedIn Learning</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <div class="card course tilt" data-reveal data-delay="3">
+          <h3>Agile Foundations</h3>
+          <p>LinkedIn Learning</p>
+
+        </div>
+        <div class="card course tilt" data-reveal data-delay="1">
+          <h3>What Is Scrum?</h3>
+          <p>LinkedIn Learning</p>
+
+        </div>
+        <div class="card course tilt" data-reveal data-delay="2">
+          <h3>Project Management Foundations: Requirements</h3>
+          <p>LinkedIn Learning</p>
+
+        </div>
+        <a class="card course tilt" href="https://learn.mongodb.com/c/0lpbbnGNRIOQ8Bi4iYPtrg" target="_blank" rel="noopener" data-reveal data-delay="3">
+          <h3>MongoDB Indexes</h3>
+          <p>MongoDB University · Feb 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://learn.mongodb.com/c/H_JDPgGZQrei9a-CpMz5mw" target="_blank" rel="noopener" data-reveal data-delay="1">
+          <h3>MongoDB Aggregation</h3>
+          <p>MongoDB University · Feb 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://learn.mongodb.com/c/iH8aCj2jSB6xQS1QizCkRQ" target="_blank" rel="noopener" data-reveal data-delay="2">
+          <h3>MongoDB CRUD Operations in Python</h3>
+          <p>MongoDB University · Feb 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://learn.mongodb.com/c/dVjZygx3QAO2M8sxCVp8Hw" target="_blank" rel="noopener" data-reveal data-delay="3">
+          <h3>MongoDB CRUD Operations: Modifying Query Results</h3>
+          <p>MongoDB University · Feb 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+        <a class="card course tilt" href="https://learn.mongodb.com/c/_xUEGuBiSAKsBUDVDH-eBg" target="_blank" rel="noopener" data-reveal data-delay="1">
+          <h3>Connecting to MongoDB in Python</h3>
+          <p>MongoDB University · Jan 2026</p>
+          <span class="text-link">View certificate ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Activities ===== -->
+    <section class="container">
+      <h2 class="section-title ruled" data-reveal>Activities</h2>
+      <div class="activity-grid">
+        <div class="card activity tilt" data-reveal>
+          <span class="badge">YC</span>
+          <div>
+            <h3>Youth Corps Singapore</h3>
+            <p>Volunteered in community engagement activities.</p>
+          </div>
+        </div>
+        <div class="card activity tilt" data-reveal data-delay="1">
+          <span class="badge">SL</span>
+          <div>
+            <h3>Service Learning Club</h3>
+            <p>Community service activities, working in teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer (the same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 May Poe Khitt. All rights reserved.</p>
+        <p>
+          Let's connect &nbsp;·&nbsp;
+          <a href="https://github.com/maypoe82" target="_blank" rel="noopener">GitHub</a> &nbsp;·&nbsp;
+          <a href="https://www.linkedin.com/in/may-poe-khitt-23a289365" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp;
+          <a href="mailto:maypoe827@gmail.com">Email</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

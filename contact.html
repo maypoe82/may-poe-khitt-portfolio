@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | May Poe Khitt</title>
+  <meta name="description" content="Contact May Poe Khitt by email, GitHub or LinkedIn.">
+  <link rel="icon" href="assets/img/favicon.png">
+
+  <!-- Fonts from the design document: Bebas Neue for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Two blurred circles of colour drifting behind the whole page ===== -->
+  <div class="orbs" aria-hidden="true"><span></span><span></span></div>
+
+  <!-- ===== Loading screen: counts to 100, then fades away ===== -->
+  <div class="loader">
+    <img src="assets/img/logo.png" alt="">
+    <p class="loader-count">000</p>
+    <div class="loader-track"><div class="loader-fill"></div></div>
+  </div>
+
+  <!-- ===== Thin line at the top showing how far down the page you are ===== -->
+  <div class="progress"></div>
+
+  <!-- ===== Navigation bar (the same on every page) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a class="nav-logo" href="index.html"><img src="assets/img/logo.png" alt="MPK logo, back to home"></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+          <li><a class="nav-cta" href="contact.html">Let's talk ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Heading ===== -->
+    <section class="container page-intro">
+      <p class="eyebrow" data-reveal>Contact</p>
+      <h1 class="page-title" data-reveal data-delay="1">Let's Connect</h1>
+      <p class="muted" style="font-size: 18px;" data-reveal data-delay="2">I'd love to hear from you.</p>
+    </section>
+
+    <!-- ===== Three ways to reach me ===== -->
+    <section class="container">
+      <div class="contact-cards">
+        <a class="card contact-card tilt" href="mailto:maypoe827@gmail.com" data-reveal data-delay="1">
+          <div class="contact-card-top">
+            <span class="badge">@</span>
+            <div><span>Email</span><strong>maypoe827@gmail.com</strong></div>
+          </div>
+          <p class="text-link muted">Open ↗</p>
+        </a>
+        <a class="card contact-card tilt" href="https://github.com/maypoe82" target="_blank" rel="noopener" data-reveal data-delay="2">
+          <div class="contact-card-top">
+            <span class="badge">GH</span>
+            <div><span>GitHub</span><strong>github.com/maypoe82</strong></div>
+          </div>
+          <p class="text-link muted">Open ↗</p>
+        </a>
+        <a class="card contact-card tilt" href="https://www.linkedin.com/in/may-poe-khitt-23a289365" target="_blank" rel="noopener" data-reveal data-delay="3">
+          <div class="contact-card-top">
+            <span class="badge">in</span>
+            <div><span>LinkedIn</span><strong>linkedin.com/in/may-poe-khitt-23a289365</strong></div>
+          </div>
+          <p class="text-link muted">Open ↗</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Message form: main.js turns it into an email ===== -->
+    <section class="container">
+      <h2 class="section-title ruled" data-reveal>Send me a message</h2>
+      <form class="contact-form" id="contact-form" novalidate data-reveal>
+        <div>
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="full">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="full">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <div class="full">
+          <button class="btn" type="submit">Send message ↗</button>
+        </div>
+        <p class="form-note full" id="form-note" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== Footer (the same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 May Poe Khitt. All rights reserved.</p>
+        <p>
+          Let's connect &nbsp;·&nbsp;
+          <a href="https://github.com/maypoe82" target="_blank" rel="noopener">GitHub</a> &nbsp;·&nbsp;
+          <a href="https://www.linkedin.com/in/may-poe-khitt-23a289365" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp;
+          <a href="mailto:maypoe827@gmail.com">Email</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
