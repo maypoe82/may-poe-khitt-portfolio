@@ -39,6 +39,9 @@
 
   --font-heading: "Bebas Neue", Impact, sans-serif;
   --font-body: "Inter", Arial, sans-serif;
+  /* The fonts a code editor uses, for anything that is technical
+     metadata rather than prose: section numbers, stack lists, labels. */
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
   --page-width: 1280px;
   --radius: 16px;
@@ -288,6 +291,9 @@ textarea:focus-visible {
   align-items: center;
   gap: 32px;
   list-style: none;
+  /* Pushed to the right so the links, the "Let's talk" pill and the
+     theme button stay together at that end of the bar. */
+  margin-left: auto;
 }
 
 .nav-links a {
@@ -1823,6 +1829,22 @@ a.cert-card:hover .cert-body h3 {
     border-bottom: 1px solid var(--accent);
   }
 
+  /* On a phone the links collapse behind MENU, so the theme button sits
+     outside the menu where it can always be reached. */
+  .theme-toggle {
+    order: 1;
+    margin-left: auto;
+    margin-right: 12px;
+  }
+
+  .nav-toggle {
+    order: 2;
+  }
+
+  .nav-links {
+    order: 3;
+  }
+
   /* main.js adds "open" when the menu button is pressed */
   .nav-links.open {
     display: flex;
@@ -2009,4 +2031,233 @@ a.cert-card:hover .cert-body h3 {
   .veil {
     display: none;
   }
+}
+
+/* ---------- 19. Light mode ----------
+   The whole site is built from the five colour variables at the top of
+   this file, so switching theme is mostly a matter of redefining them.
+   The greys swap ends: the page background becomes the lightest colour
+   and the text becomes the darkest. Because buttons are written as
+   "background: var(--accent); color: var(--navy-black)", flipping both
+   variables turns a light button on a dark page into a dark button on a
+   light page, with no extra rules.
+
+   The rules after the variables are the handful of places where a
+   colour was written directly instead of coming from a variable:
+   glows, drop shadows and the gradient on the big headings. */
+:root[data-theme="light"] {
+  --navy-black: #F2F3F5;   /* page background, and text sitting on --accent */
+  --charcoal:   #FFFFFF;   /* cards */
+  --slate:      #D7DAE2;   /* borders and image backgrounds */
+  --light-grey: #5B6270;   /* secondary text, dark enough to read on white */
+  --off-white:  #111318;   /* main text */
+
+  --accent:      #1B1E26;  /* strongest highlight: now dark instead of silver */
+  --accent-soft: #353A46;
+  --accent-2:    #6E7585;
+  --glow: rgba(17, 19, 24, 0.12);
+
+  --lift-shadow:
+    0 2px 6px rgba(17, 19, 24, 0.06),
+    0 18px 40px rgba(17, 19, 24, 0.12),
+    0 0 30px rgba(17, 19, 24, 0.05);
+}
+
+/* The big headings run dark-to-grey instead of white-to-grey */
+:root[data-theme="light"] .hero h1,
+:root[data-theme="light"] .about-hero h1,
+:root[data-theme="light"] .cta h2,
+:root[data-theme="light"] .modal-box h2 {
+  /* background-image, not the background shorthand: the shorthand would
+     reset background-clip and the text would turn into a solid block */
+  background-image: linear-gradient(135deg, #111318 0%, #353A46 46%, #828A9A 112%);
+}
+
+/* Panels that were written as a dark colour rather than a variable */
+:root[data-theme="light"] .site-header {
+  background: rgba(242, 243, 245, 0.7);
+}
+
+:root[data-theme="light"] .site-header.scrolled {
+  background: rgba(242, 243, 245, 0.92);
+  border-bottom-color: rgba(17, 19, 24, 0.12);
+}
+
+:root[data-theme="light"] .stats {
+  background: linear-gradient(135deg, rgba(17, 19, 24, 0.05), rgba(255, 255, 255, 0.95) 45%);
+}
+
+/* In light mode the filled buttons must stay dark the whole way across,
+   otherwise the light text on them disappears into the pale end of the
+   gradient. */
+:root[data-theme="light"] .nav-links a.nav-cta {
+  background: linear-gradient(135deg, #1B1E26, #3E4452);
+}
+
+:root[data-theme="light"] .btn:not(.btn-outline) {
+  background: linear-gradient(135deg, #111318, #353A46 55%, #4A5160);
+}
+
+:root[data-theme="light"] .btn-outline,
+:root[data-theme="light"] .filter-btn,
+:root[data-theme="light"] .contact-form input,
+:root[data-theme="light"] .contact-form textarea {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* The drifting background circles are far too heavy on a light page */
+:root[data-theme="light"] .orbs span {
+  opacity: 0.07;
+}
+
+/* The logo is drawn in light grey, so it is inverted to stay visible */
+:root[data-theme="light"] .nav-logo img,
+:root[data-theme="light"] .loader img {
+  filter: invert(1);
+}
+
+/* Shadows that were almost black, softened so they read as paper */
+:root[data-theme="light"] .btn-outline:hover {
+  box-shadow: 0 10px 26px rgba(17, 19, 24, 0.14);
+}
+
+:root[data-theme="light"] .hero-photo img,
+:root[data-theme="light"] .about-hero img {
+  box-shadow: 0 24px 60px rgba(17, 19, 24, 0.18);
+}
+
+:root[data-theme="light"] .modal-box {
+  background: var(--charcoal);
+  border-color: rgba(17, 19, 24, 0.14);
+  box-shadow: 0 40px 90px rgba(17, 19, 24, 0.25);
+}
+
+/* The light sweep across buttons and cards becomes a dark sweep */
+:root[data-theme="light"] .btn::before {
+  background: linear-gradient(100deg, transparent, rgba(17, 19, 24, 0.14), transparent);
+}
+
+:root[data-theme="light"] .cta::after {
+  background: linear-gradient(100deg, transparent, rgba(17, 19, 24, 0.06), transparent);
+}
+
+:root[data-theme="light"] .tilt::after {
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(17, 19, 24, 0.07), transparent 62%);
+}
+
+/* The sun and moon button in the navigation bar */
+.theme-toggle {
+  /* The nav is a flex row; order 3 puts the button after the links on a
+     laptop, and the phone rule below moves it next to the MENU button. */
+  order: 3;
+  flex: 0 0 auto;
+  margin-left: 24px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--slate);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--off-white);
+  cursor: pointer;
+  transition: border-color var(--speed) var(--ease), color var(--speed) var(--ease),
+    background var(--speed) var(--ease), transform var(--speed) var(--ease);
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px) rotate(-12deg);
+}
+
+.theme-toggle svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+/* Only one of the two icons is shown, depending on the theme */
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+/* ---------- 20. Engineering details ----------
+   Small typographic touches that make the site read like it was built
+   by someone who writes software, rather than assembled from a
+   template: a faint dot grid behind everything, numbered sections, and
+   a monospace face for anything that is technical metadata. */
+
+/* A faint dot grid, like graph paper under the page */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0);
+  background-size: 38px 38px;
+  color: var(--off-white);
+  opacity: 0.035;
+}
+
+/* Sections count themselves: 01, 02, 03 down the page */
+body {
+  counter-reset: section;
+}
+
+.section-title {
+  counter-increment: section;
+}
+
+/* This replaces the plain dash that used to sit in front of a section
+   heading: the number and the dash together, in the code face. */
+.section-title::before {
+  content: counter(section, decimal-leading-zero) " \2014";
+  display: inline;
+  width: auto;
+  height: auto;
+  margin-right: 12px;
+  vertical-align: baseline;
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  letter-spacing: 1px;
+  color: var(--light-grey);
+}
+
+/* Technical metadata in a code face */
+.eyebrow,
+.tech,
+.stat p,
+.filter-btn,
+.loader-count {
+  font-family: var(--font-mono);
+}
+
+/* The architecture drawing inside a project pop-up */
+.modal-arch {
+  margin: 26px 0 6px;
+  padding: 22px 20px;
+  border: 1px solid var(--slate);
+  border-radius: 12px;
+  background: var(--navy-black);
+  color: var(--light-grey);
+}
+
+.modal-arch:empty {
+  display: none;
+}
+
+.modal-arch svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.proj-arch {
+  display: none;
 }

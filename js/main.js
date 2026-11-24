@@ -18,6 +18,7 @@
    11. 3D tilt and pointer highlight
    12. Background parallax
    13. Moving between pages
+   14. Light and dark mode
    ===================================================================== */
 
 // If the visitor has asked their device to reduce animation, we skip the
@@ -328,6 +329,11 @@ if (modal) {
       });
     }
 
+    // The architecture drawing, if this project has one
+    const archSlot = modal.querySelector(".modal-arch");
+    const archSource = card.querySelector(".proj-arch");
+    if (archSlot) archSlot.innerHTML = archSource ? archSource.innerHTML : "";
+
     fillList(".modal-features", card.dataset.features);
     fillList(".modal-role", card.dataset.role);
 
@@ -522,5 +528,26 @@ if (!reduceMotion) {
   // exactly as it was left, sheet and all, so clear it again.
   window.addEventListener("pageshow", function (event) {
     if (event.persisted) veil.classList.remove("on");
+  });
+}
+
+// ---------- 14. Light and dark mode ----------
+// The theme itself is already applied by the small script in the <head>,
+// which runs before the page is drawn so it never flashes the wrong
+// colours. This part only handles the button: it flips the attribute on
+// <html>, which swaps the colour variables in section 19 of style.css,
+// and remembers the choice for next time.
+const themeButton = document.querySelector(".theme-toggle");
+
+if (themeButton) {
+  themeButton.addEventListener("click", function () {
+    const now = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", now);
+    try {
+      localStorage.setItem("mpk-theme", now);
+    } catch (error) {
+      // A browser set to block site data throws here. The theme still
+      // changes for this visit; it just will not be remembered.
+    }
   });
 }
